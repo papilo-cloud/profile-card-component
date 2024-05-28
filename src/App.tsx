@@ -14,7 +14,18 @@ function App() {
               </ProfileCard.CardInfo>
             </ProfileCard.BackgroundContent>
             <ProfileCard.TextContent>
-              <ProfileCard.Typography.HeadingText>300k</ProfileCard.Typography.HeadingText>
+                <ProfileCard.Stats>
+                    <ProfileCard.Stat.Count>80k</ProfileCard.Stat.Count>
+                    <ProfileCard.Stat.Name>Followers</ProfileCard.Stat.Name>
+                </ProfileCard.Stats>
+                <ProfileCard.Stats>
+                    <ProfileCard.Stat.Count>803k</ProfileCard.Stat.Count>
+                    <ProfileCard.Stat.Name>Likes</ProfileCard.Stat.Name>
+                </ProfileCard.Stats>
+                <ProfileCard.Stats>
+                    <ProfileCard.Stat.Count>1.4k</ProfileCard.Stat.Count>
+                    <ProfileCard.Stat.Name>Photos</ProfileCard.Stat.Name>
+                </ProfileCard.Stats>
             </ProfileCard.TextContent>
         </ProfileCard.Root>
     </div>
