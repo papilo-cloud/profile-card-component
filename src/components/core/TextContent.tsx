@@ -1,14 +1,16 @@
 import clsx from 'clsx'
-import React, { ComponentProps, ReactElement } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 
 export interface TextContentProps extends ComponentProps<'div'> {
-    children: ReactElement
+    children: ReactNode
 }
 
 export const TextContent = ({children, className, ...props}: TextContentProps) => {
   return (
-    <div className={clsx(' relative w-full py-5 flex justify-between items-center')} {...props}>
-        {children}
+    <div className={clsx(' relative w-full py-5 px-8 flex justify-between items-center')} {...props}>
+        {children?.[0 as keyof ReactNode]}
+        {children?.[1 as keyof ReactNode]}
+        {children?.[2 as keyof ReactNode]}
     </div>
   )
 }

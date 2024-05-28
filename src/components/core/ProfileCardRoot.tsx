@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 
 export interface RootProps extends ComponentProps<'div'> {
   children: ReactNode

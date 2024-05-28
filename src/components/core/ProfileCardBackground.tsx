@@ -1,25 +1,21 @@
 import clsx from 'clsx'
 import defaultBgPattern from '../../../public/images/bg-pattern-card.svg'
 import defaultAvatar from '../../../public/images/image-victor.jpg'
-import { ComponentProps, ReactSVGElement } from 'react'
-import React, { ReactNode } from 'react'
+import { ComponentProps } from 'react'
+import { ReactNode } from 'react'
 
 interface BackgroundProps extends ComponentProps<'div'> {
-    children: ReactNode
+    children?: ReactNode
 }
 
 export const BackgroundContent = ({className, children, ...props}: BackgroundProps) => {
   return (
     <div className={clsx('w-full h-full relative bg-white flex flex-col border-b-2 border-gray-300 ', className)} {...props}>
-        {children}
+        {children?.[0 as keyof ReactNode]}
         <div className={clsx('relative w-full min-h-[120px] bg-white flex flex-col justify-end items-center pb-5', className)}>
-            <div className={clsx('relative flex gap-2')}>
-               <h2>Victor Crest</h2>
-               <p>26</p>
-            </div>
-            <p>London</p>
+                {children?.[1 as keyof ReactNode]}
         </div>
-        {/* {children?.[0 as keyof ReactNode]}
+        {/* }
         {children?.[1 as keyof ReactNode]} */}
     </div>
   )
