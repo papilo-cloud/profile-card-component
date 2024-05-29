@@ -3,7 +3,7 @@ import React, { ComponentProps, ReactNode } from 'react'
 
 export const ProfileCardStats: React.FC<ComponentProps<'div'>> = ({children, className, ...props}) => {
   return (
-    <div className={clsx('flex flex-col gap-0.5 justify-center items-center', className)}>
+    <div className={clsx('flex flex-col gap-0.5 justify-center items-center', className)} {...props}>
         {children?.[0 as keyof ReactNode]}
         {children?.[1 as keyof ReactNode]}
     </div>
