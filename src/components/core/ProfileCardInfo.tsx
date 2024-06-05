@@ -1,15 +1,13 @@
 import clsx from 'clsx'
 import React, {ComponentProps, ReactNode} from 'react'
-interface ProductCardInfoProps {
-    children: ReactNode
-}
 
- export const CardInfo = ({children, ...props}: ProductCardInfoProps) => {
+
+ export const CardInfo: React.FC<ComponentProps<'div'>> = ({children, ...props}) => {
   return (
     <div className={clsx(' flex justify-center items-center flex-col gap-1')} {...props}>
         <div className=' flex justify-center items-center gap-2'>
-            {children?.[0 as keyof ReactNode]}
-            {children?.[1 as keyof ReactNode]}
+            {children?.[0]}
+            {children?.[1]}
         </div>
         {children?.[2 as keyof ReactNode]}
     </div>
