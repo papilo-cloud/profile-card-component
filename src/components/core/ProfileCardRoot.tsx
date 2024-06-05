@@ -1,15 +1,12 @@
 import clsx from 'clsx';
-import { ComponentProps, ReactNode } from 'react'
+import React, { ComponentProps, ReactNode } from 'react'
 
-export interface RootProps extends ComponentProps<'div'> {
-  children: ReactNode
-}
 
-const Root = ({children, className, ...props}: RootProps) => {
+
+const Root: React.FC<ComponentProps<'div'>> = ({children, className, ...props}) => {
   return (
     <div className={clsx('relative sm:w-[375px] overflow-hidden w-full h-auto bg-white shadow-xl rounded-2xl ', className)} {...props}>
-        {children?.[0 as keyof ReactNode]}
-        {children?.[1 as keyof ReactNode]}
+        {children}
     </div>
   )
 }
