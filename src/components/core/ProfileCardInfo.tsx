@@ -6,8 +6,8 @@ import React, {ComponentProps, ReactNode} from 'react'
   return (
     <div className={clsx(' flex justify-center items-center flex-col gap-1')} {...props}>
         <div className=' flex justify-center items-center gap-2'>
-            {children?.[0]}
-            {children?.[1]}
+            {children?.[0 as keyof ReactNode]}
+            {children?.[1 as keyof ReactNode]}
         </div>
         {children?.[2 as keyof ReactNode]}
     </div>
